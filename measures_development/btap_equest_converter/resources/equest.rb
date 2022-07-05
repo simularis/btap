@@ -310,6 +310,8 @@ module BTAP
             end
             #puts "DOE22::DOECommand: #{command_string}"
             #puts "K = #{keyword} V = #{value}\n"
+			BTAP::runner_register("Info", "DOE22::DOECommand: #{command_string}")
+			BTAP::runner_register("Info", "K = #{keyword} V = #{value}\n")
             if (keyword != "")
               set_keyword_value(keyword,value)
             end
